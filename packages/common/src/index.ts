@@ -1,2 +1,2 @@
 export * from './lib/common';
-export * from './lib/models';
+export {Entry, Entries} from './lib/model.dto'

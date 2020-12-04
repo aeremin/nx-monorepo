@@ -3,7 +3,7 @@ import { Entries, Entry } from '@alice-3.1/common';
 
 @Injectable()
 export class AppService {
-  data: Entries;
+  data: Entries = {entries: [{message: 'test'}]};
 
   getData() {
     return this.data;

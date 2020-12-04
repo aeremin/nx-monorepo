@@ -1,19 +1,22 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 
 import { AppService } from './app.service';
-import { Entry } from '@alice-3.1/common';
+import { Entries, Entry } from '@alice-3.1/common';
+import { ApiResponse } from '@nestjs/swagger';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getData() {
+  @ApiResponse({ status: 200, type: Entries })
+  getData(): Entries {
     return this.appService.getData();
   }
 
   @Post()
-  addEntry(entry: Entry) {
-    return this.appService.addEntry(entry);
+  @ApiResponse({ status: 200 })
+  addEntry(@Body() entry: Entry) {
+    this.appService.addEntry(entry);
   }
 }
