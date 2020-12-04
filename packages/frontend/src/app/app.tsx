@@ -3,6 +3,38 @@ import React from 'react';
 import './app.css';
 
 import { Route, Link } from 'react-router-dom';
+import { Entries, Entry } from '@alice-3.1/common';
+
+class EntryCard extends React.Component<{value: Entry}> {
+  render() {
+    return (
+      <div> {this.props.value.message} </div>
+    );
+  }
+}
+
+class EntriesList extends React.Component<unknown, Entries> {
+  state = {entries: []}
+
+  componentDidMount() {
+    fetch("http://localhost:3333/api")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState(result);
+        },
+        (error) => {console.log(error)}
+      )
+  }
+
+
+  render() {
+    return this.state.entries.map((entry, index) =>
+      (
+        <EntryCard value={entry} key={index}/>
+      ));
+  }
+}
 
 export function App() {
   /*
@@ -16,6 +48,7 @@ export function App() {
         <h3>Welcome to frontend!</h3>
       </header>
       <main>
+        <EntriesList/>
       </main>
 
       {/* START: routes */}
