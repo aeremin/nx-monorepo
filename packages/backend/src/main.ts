@@ -24,6 +24,7 @@ async function bootstrap() {
   SwaggerModule.setup('swagger', app, document);
 
   app.useGlobalPipes(new ValidationPipe({whitelist: true}));
+  app.enableCors();
 
   const port = process.env.PORT || 3333;
   await app.listen(port, () => {
