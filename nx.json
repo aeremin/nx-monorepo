@@ -22,7 +22,21 @@
       }
     }
   },
-  "projects": {},
+  "projects": {
+    "common": {
+      "tags": []
+    },
+    "backend": {
+      "tags": []
+    },
+    "frontend": {
+      "tags": []
+    },
+    "frontend-e2e": {
+      "tags": [],
+      "implicitDependencies": ["frontend"]
+    }
+  },
   "workspaceLayout": {
     "appsDir": "packages",
     "libsDir": "packages"
