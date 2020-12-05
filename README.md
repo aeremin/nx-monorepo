@@ -38,7 +38,11 @@ TODOs:
 
 ### Backend
 
-Example [NestJS](https://docs.nestjs.com/) app is set up. There is a Swagger and basic request body validation. 
+Example [NestJS](https://docs.nestjs.com/) app is set up. There is a Swagger and basic request body validation.
+
+TODOs:
+- Is there a non-ugly/non-boilerplate way to create client libraries for the provided HTTP methods?
+  So there is type-safety, etc.
 
 ### Common libraries
 
