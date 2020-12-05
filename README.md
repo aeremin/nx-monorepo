@@ -44,11 +44,6 @@ TODOs:
 
 There is an example library, data objects from it are used both in backend and frontend.
 
-TODOs:
-- Is there a way not to have `src` subfolders? They don't provide a lot of value, but make a folder
-  structure "deeper".
-  - Removed it in common library, but it seems that Nx really wants to have `src/assets` folders in apps.
-
 ### Tools
 
 **TODO**: Figure out how to conveniently create CLI tools in Nx.

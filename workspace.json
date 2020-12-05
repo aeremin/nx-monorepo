@@ -3,7 +3,7 @@
   "projects": {
     "common": {
       "root": "packages/common",
-      "sourceRoot": "packages/common/src",
+      "sourceRoot": "packages/common",
       "projectType": "library",
       "schematics": {},
       "architect": {
@@ -74,7 +74,7 @@
     },
     "frontend": {
       "root": "packages/frontend",
-      "sourceRoot": "packages/frontend/src",
+      "sourceRoot": "packages/frontend",
       "projectType": "application",
       "schematics": {},
       "architect": {
@@ -82,15 +82,14 @@
           "builder": "@nrwl/web:build",
           "options": {
             "outputPath": "dist/packages/frontend",
-            "index": "packages/frontend/src/index.html",
-            "main": "packages/frontend/src/main.tsx",
-            "polyfills": "packages/frontend/src/polyfills.ts",
+            "index": "packages/frontend/index.html",
+            "main": "packages/frontend/main.tsx",
+            "polyfills": "packages/frontend/polyfills.ts",
             "tsConfig": "packages/frontend/tsconfig.app.json",
             "assets": [
-              "packages/frontend/src/favicon.ico",
-              "packages/frontend/src/assets"
+              "packages/frontend/favicon.ico"
             ],
-            "styles": ["packages/frontend/src/styles.css"],
+            "styles": ["packages/frontend/styles.css"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -98,8 +97,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "packages/frontend/src/environments/environment.ts",
-                  "with": "packages/frontend/src/environments/environment.prod.ts"
+                  "replace": "packages/frontend/environments/environment.ts",
+                  "with": "packages/frontend/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
