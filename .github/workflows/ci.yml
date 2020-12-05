@@ -14,3 +14,5 @@ jobs:
       - uses: mansagroup/nrwl-nx-action@v1.0.1
         with:
           targets: lint,build,test
+          all: true
+          affected: false
