@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 
 import { AppService } from './app.service';
-import { Entries, Entry } from '@nx-monorepo/common/dto/model.dto'
+import { Entries, Entry } from '@nx-monorepo/common/dto/model.dto';
 import { ApiResponse } from '@nestjs/swagger';
 
 @Controller()

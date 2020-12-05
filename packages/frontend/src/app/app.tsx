@@ -4,39 +4,37 @@ import './app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Route, Link } from 'react-router-dom';
-import { Entries, Entry } from '@nx-monorepo/common/dto/model.dto'
+import { Entries, Entry } from '@nx-monorepo/common/dto/model.dto';
 import Alert from 'react-bootstrap/Alert';
 import axios from 'axios';
 
-
-class EntryCard extends React.Component<{value: Entry}> {
+class EntryCard extends React.Component<{ value: Entry }> {
   render() {
-    return (
-      <Alert variant={"info"}> {this.props.value.message} </Alert>
-    );
+    return <Alert variant={'info'}> {this.props.value.message} </Alert>;
   }
 }
 
 class EntriesList extends React.Component<unknown, Entries> {
-  state = {entries: []}
+  state = { entries: [] };
 
   componentDidMount() {
-    axios.get("http://localhost:3333/api")
-      .then(res => res.data)
+    axios
+      .get('http://localhost:3333/api')
+      .then((res) => res.data)
       .then(
         (result) => {
           this.setState(result);
         },
-        (error) => {console.log(error)}
-      )
+        (error) => {
+          console.log(error);
+        }
+      );
   }
 
-
   render() {
-    return this.state.entries.map((entry, index) =>
-      (
-        <EntryCard value={entry} key={index}/>
-      ));
+    return this.state.entries.map((entry, index) => (
+      <EntryCard value={entry} key={index} />
+    ));
   }
 }
 
@@ -52,7 +50,7 @@ export function App() {
         <h3>Welcome to frontend!</h3>
       </header>
       <main>
-        <EntriesList/>
+        <EntriesList />
       </main>
 
       {/* START: routes */}

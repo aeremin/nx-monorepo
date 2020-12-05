@@ -17,7 +17,7 @@ describe('AppController', () => {
     it('should return "Welcome to backend!"', () => {
       const appController = app.get<AppController>(AppController);
       expect(appController.getData()).toEqual({
-        entries: [{ message: 'test' }]
+        entries: [{ message: 'test' }],
       });
     });
   });
