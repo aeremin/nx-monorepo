@@ -4,6 +4,7 @@ import './app.css';
 
 import { Route, Link } from 'react-router-dom';
 import { Entries, Entry } from '@nx-monorepo/common';
+import axios from 'axios';
 
 class EntryCard extends React.Component<{value: Entry}> {
   render() {
@@ -17,8 +18,8 @@ class EntriesList extends React.Component<unknown, Entries> {
   state = {entries: []}
 
   componentDidMount() {
-    fetch("http://localhost:3333/api")
-      .then(res => res.json())
+    axios.get("http://localhost:3333/api")
+      .then(res => res.data)
       .then(
         (result) => {
           this.setState(result);
