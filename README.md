@@ -62,4 +62,5 @@ There is a dedicated folder for them, so probably there is a way :)
 
 ### Infrastructure
 TODOs:
+- Enable autoformatting in WebStorm/VS Code via Prettier.
 - Set up docker builds as part of the CI.
