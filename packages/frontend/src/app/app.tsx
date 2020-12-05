@@ -3,7 +3,7 @@ import React from 'react';
 import './app.css';
 
 import { Route, Link } from 'react-router-dom';
-import { Entries, Entry } from '@alice-3.1/common';
+import { Entries, Entry } from '@nx-monorepo/common';
 
 class EntryCard extends React.Component<{value: Entry}> {
   render() {

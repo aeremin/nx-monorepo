@@ -1,4 +1,4 @@
-# Alice3.1
+# nx-monorepo
 
 This project was generated using [Nx](https://nx.dev).
 
@@ -43,7 +43,7 @@ Run `nx g @nrwl/react:lib my-lib` to generate a library.
 
 > You can also use any of the plugins above to generate libraries as well.
 
-Libraries are sharable across libraries and applications. They can be imported from `@alice-3.1/mylib`.
+Libraries are sharable across libraries and applications. They can be imported from `@nx-monorepo/mylib`.
 
 ## Development server
 
