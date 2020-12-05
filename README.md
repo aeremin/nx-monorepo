@@ -50,6 +50,7 @@ There is an example library, data objects from it are used both in backend and f
 TODOs:
 - Is there a way not to have `src` subfolders? They don't provide a lot of value, but make a folder
   structure "deeper".
+  - Removed it in common library, but it seems that Nx really wants to have `src/assets` folders in apps.
 
 ### Tools
 

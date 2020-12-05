@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Entries, Entry } from '@nx-monorepo/common/model.dto';
+import { Entries, Entry } from '@nx-monorepo/common/dto/model.dto'
 
 @Injectable()
 export class AppService {
