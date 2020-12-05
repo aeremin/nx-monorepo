@@ -4,7 +4,7 @@ import './app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Route, Link } from 'react-router-dom';
-import { Entries, Entry } from '@nx-monorepo/common';
+import { Entries, Entry } from '@nx-monorepo/common/model.dto';
 import Alert from 'react-bootstrap/Alert';
 import axios from 'axios';
 

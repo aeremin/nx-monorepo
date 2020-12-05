@@ -16,7 +16,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-monorepo/common": ["packages/common/src/index.ts"]
+      "@nx-monorepo/common/*": ["packages/common/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

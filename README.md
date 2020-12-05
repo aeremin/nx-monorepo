@@ -48,10 +48,6 @@ TODOs:
 There is an example library, data objects from it are used both in backend and frontend.
 
 TODOs:
-- Re-exporting everything via single `index.ts` file is ugly.
-  Yeah, one can limit the public API of the package in that way, but that is ugly nevertheless.
-  Does Nx support importing everything directly from the implementation file? Probably some fiddling
-  with `paths` in `tsconfig.json` is needed. 
 - Is there a way not to have `src` subfolders? They don't provide a lot of value, but make a folder
   structure "deeper".
 
