@@ -33,7 +33,6 @@
 Example [React](https://reactjs.org/) app is set up. I've almost no idea how React works, so it's ugly.
 
 TODOs:
-- Find some not-that-ugly web components to use. Bootstrap-react-something? Remove all custom css inherited from template.
 - Implement some non-trivial routing example (e.g. taking ID of something from the URL).
 
 ### Backend

@@ -1,15 +1,18 @@
 import React from 'react';
 
 import './app.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Route, Link } from 'react-router-dom';
 import { Entries, Entry } from '@nx-monorepo/common';
+import Alert from 'react-bootstrap/Alert';
 import axios from 'axios';
+
 
 class EntryCard extends React.Component<{value: Entry}> {
   render() {
     return (
-      <div> {this.props.value.message} </div>
+      <Alert variant={"info"}> {this.props.value.message} </Alert>
     );
   }
 }
