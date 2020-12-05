@@ -32,9 +32,6 @@
 
 Example [React](https://reactjs.org/) app is set up. I've almost no idea how React works, so it's ugly.
 
-TODOs:
-- Implement some non-trivial routing example (e.g. taking ID of something from the URL).
-
 ### Backend
 
 Example [NestJS](https://docs.nestjs.com/) app is set up. There is a Swagger and basic request body validation.
