@@ -24,7 +24,7 @@
     },
     "backend": {
       "root": "packages/backend",
-      "sourceRoot": "packages/backend/src",
+      "sourceRoot": "packages/backend",
       "projectType": "application",
       "prefix": "backend",
       "schematics": {},
@@ -33,9 +33,9 @@
           "builder": "@nrwl/node:build",
           "options": {
             "outputPath": "dist/packages/backend",
-            "main": "packages/backend/src/main.ts",
+            "main": "packages/backend/main.ts",
             "tsConfig": "packages/backend/tsconfig.app.json",
-            "assets": ["packages/backend/src/assets"]
+            "assets": []
           },
           "configurations": {
             "production": {
@@ -44,8 +44,8 @@
               "inspect": false,
               "fileReplacements": [
                 {
-                  "replace": "packages/backend/src/environments/environment.ts",
-                  "with": "packages/backend/src/environments/environment.prod.ts"
+                  "replace": "packages/backend/environments/environment.ts",
+                  "with": "packages/backend/environments/environment.prod.ts"
                 }
               ]
             }
