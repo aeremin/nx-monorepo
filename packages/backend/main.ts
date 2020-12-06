@@ -30,6 +30,21 @@ async function bootstrap() {
   await app.listen(port, () => {
     Logger.log('Listening at http://localhost:' + port + '/' + globalPrefix);
   });
+
+  Logger.log('Hello world 2!');
+
+  const r = require.context('./stuff', true, /.*\.ts/);
+  r.keys().map((filename) => {
+    console.log(filename);
+    console.log(r(filename));
+    const src = r(filename);
+    src['foo']();
+    for (const fname in src) {
+      if (typeof src[fname] != 'function') {
+        delete src[fname];
+      }
+    }
+  })
 }
 
 bootstrap();
